@@ -1,0 +1,3 @@
+[submodule "exe/lns-removal-replan"]
+	path = exe/lns-removal-replan
+	url = https://github.com/ChristinaTan0704/lns-removal-replan.git
