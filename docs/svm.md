@@ -53,7 +53,7 @@ python svm/svm_run.py --option infer \
 
 
 # Parameter Setup for Benchmark Result
-To get the SVM-Orig and SVM-Our result from the paper, please set the value of each parameter as follow:
+To get the benchmark results for SVM-Orig and SVM-Our, please set the value of each parameter as follow:
 
 ## Training Configuration
 
