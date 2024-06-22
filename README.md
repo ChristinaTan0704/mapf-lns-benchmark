@@ -24,7 +24,7 @@ This repository provides the official implementation of the paper [Benchmarking 
 - [Citation](#citation)
 
 ## Introduction
-<!-- TODO update here -->
+TODO: will be updated by June 25th, 2024
 
 ## Installation
 
@@ -50,22 +50,29 @@ sudo apt update
 ## Methods
 
 ### Rule-based 
+TODO: will be updated by June 25th, 2024
 
 ### Learning-based
+TODO: will be updated by June 25th, 2024
 
 #### SVM
 
+For instreuctions on how to train and inference SVM-LNS, please follow [SVM-LNS implementation](docs/svm.md).
+
 #### Neural
+TODO: will be updated by June 25th, 2024
 
 #### Bandit
+TODO: will be updated by June 25th, 2024
 
 
 ## Acknowledgements
-
+TODO: will be updated by June 25th, 2024
 <!-- TODO update here We're grateful to the open-source projects below, their great work made our project possible: -->
 
 
 ## Citation
+TODO: will be updated by June 25th, 2024
 <!-- TODO update here -->
 If you find our work useful in your research or applications, please consider citing:
 
