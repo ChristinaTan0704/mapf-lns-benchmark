@@ -1,6 +1,3 @@
-[submodule "exe/lns-removal-replan"]
-	path = exe/lns-removal-replan
-	url = https://github.com/ChristinaTan0704/lns-removal-replan.git
 [submodule "exe/json"]
 	path = exe/json
 	url = https://github.com/nlohmann/json.git
