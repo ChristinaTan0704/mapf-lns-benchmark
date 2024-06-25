@@ -70,7 +70,7 @@ TODO: will be updated by June 25th, 2024
 
 ### Rule-based 
 
-Please check the [instruction](exe/lns-rule-based/README.md) of submodule `exe/lns-rule-based` for how to implement the rule-based results.
+Please check the [instruction](https://github.com/ChristinaTan0704/mapf-lns-exe/blob/rule-based/README.md) of submodule `exe/lns-rule-based` for how to implement the rule-based results.
 
 ### Learning-based
 TODO: will be updated by June 25th, 2024
