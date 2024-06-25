@@ -93,10 +93,6 @@ TODO: will be updated by June 25th, 2024
 <!-- 
 ## Citation
 TODO: will be updated by June 25th, 2024
-<!-- TODO update here -->
 If you find our work useful in your research or applications, please consider citing:
 
-```
-
-```
- -->
+-->
