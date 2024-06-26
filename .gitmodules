@@ -15,3 +15,7 @@
 [submodule "exe/pbs-replan"]
 	path = exe/pbs-replan
 	url = git@github.com:ChristinaTan0704/PBS-LNS.git
+[submodule "exe/pp-replan"]
+	path = exe/pp-replan
+	url = https://github.com/ChristinaTan0704/mapf-lns-exe.git
+	branch = pp
