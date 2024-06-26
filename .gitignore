@@ -1,2 +1,3 @@
 data/svm/train/*
 output/*
+*__pycache__*

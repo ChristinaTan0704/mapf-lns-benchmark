@@ -81,7 +81,8 @@ Please check the [instruction](https://github.com/ChristinaTan0704/mapf-lns-exe/
 For instreuctions on how to train and inference SVM-LNS, please follow [SVM-LNS implementation](docs/svm.md).
 
 #### Neural
-TODO: will be updated by June 25th, 2024
+
+For instreuctions on how to train and inference NNS-LNS, please follow [NNS-LNS implementation](docs/nns.md).
 
 #### Bandit
 TODO: will be updated by June 25th, 2024
