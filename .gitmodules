@@ -19,3 +19,6 @@
 	path = exe/pp-replan
 	url = https://github.com/ChristinaTan0704/mapf-lns-exe.git
 	branch = pp
+[submodule "exe/bandit"]
+	path = exe/bandit
+	url = https://github.com/ChristinaTan0704/anytime-mapf.git

@@ -72,7 +72,7 @@ Please check [data preparation](docs/data.md) for how to download the input data
 
 ### Rule-based 
 
-Please check the [instruction](https://github.com/ChristinaTan0704/mapf-lns-exe/blob/rule-based/README.md) of submodule `exe/lns-rule-based` for how to implement the rule-based results.
+The executable for generating rule-based results can be found in the submodule under `exe/lns-rule-based`. Please check the [instruction](https://github.com/ChristinaTan0704/mapf-lns-exe/blob/rule-based/README.md) of submodule `exe/lns-rule-based` for how to implement the rule-based results.
 
 ### Learning-based
 
@@ -85,7 +85,8 @@ For instreuctions on how to train and inference SVM-LNS, please follow [SVM-LNS 
 For instreuctions on how to train and inference NNS-LNS, please follow [NNS-LNS implementation](docs/nns.md).
 
 #### Bandit
-TODO: will be updated by June 25th, 2024
+
+The executable for generating bandit results can be found in the submodule under `exe/bandit`. For instreuctions on how to train and inference bandit, please follow [bandit implementation](https://github.com/ChristinaTan0704/anytime-mapf/blob/main/README.md).
 
 
 <!-- ## Acknowledgements
