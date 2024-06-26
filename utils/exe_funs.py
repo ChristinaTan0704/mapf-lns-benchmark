@@ -14,6 +14,53 @@ import shutil
 from collections import deque
 from collections import OrderedDict
 
+def cpp_pp_replanOpen(exe, state="", replanAgents=None):
+
+    succ = False
+    while not succ:
+        cpp_input = "--state {} --replanAgents {} \n".format(state, " ".join([str(i) for i in replanAgents]))
+        
+        print("cpp_input: ", cpp_input)
+        # To send data to the C++ process
+        exe.stdin.write(cpp_input)
+        exe.stdin.flush()
+
+        # To read a line from C++ process
+        cpp_output = []
+        while True:
+            line = exe.stdout.readline()
+            cpp_output.append(line)
+            if "CPP program" in line:
+                break
+        cpp_output = [line.strip() for line in cpp_output]
+        
+        # parse file_info to get removal set, removal time, average improvement, and new paths for each subset
+        agnet_paths = dict()
+        average_replan_time = None
+        improvement = None
+
+        for line_idx in range(len(cpp_output)):
+            if "average_replan_time:" in cpp_output[line_idx]:
+                average_replan_time = float(re.findall(r'average_replan_time: (.*?)$', cpp_output[line_idx])[0])
+            if "average_improvement:" in cpp_output[line_idx]:
+                improvement = float(re.findall(r'average_improvement: (.*?)$', cpp_output[line_idx])[0])
+                succ = True
+            if "new paths start" in cpp_output[line_idx]:
+                agnet_paths = defaultdict(list)
+                while "new paths end" not in cpp_output[line_idx]:
+                    line_idx += 1
+                    if "new paths end" in cpp_output[line_idx]:
+                        break
+                    if "agent" in cpp_output[line_idx]:
+                        agent_id = int(re.findall(r'agent (.*?) ', cpp_output[line_idx])[0])
+                        path = re.findall("\((\d+),(\d+)\)", cpp_output[line_idx])
+                        path = [(int(i[0]), int(i[1])) for i in path]
+                        agnet_paths[agent_id] = path
+
+
+    return agnet_paths, average_replan_time, improvement
+ 
+
 
 def pbs_replan(pbs_exe_path="", replanAgents=[], input_map="", agentNum=0, state=""):
 
@@ -66,15 +113,15 @@ def cpp_removal_Open(exe, state="", adaptive_weight=[1,1,0]):
 
     succ = False
     while not succ:
-        cpp_input = "--state {} --adaptive_weight {} ".format(state, " ".join([str(i) for i in adaptive_weight]))
+        cpp_input = "--state {} --adaptive_weight {} \n".format(state, " ".join([str(i) for i in adaptive_weight]))
         
         print("cpp_input: ", cpp_input)
         # To send data to the C++ process
         exe.stdin.write(cpp_input)
         exe.stdin.flush()
-
         # To read a line from C++ process
         cpp_output = []
+        
         while True:
             line = exe.stdout.readline()
             cpp_output.append(line)

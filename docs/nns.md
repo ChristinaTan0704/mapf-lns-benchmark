@@ -108,6 +108,8 @@ python nns/run/nns_train.py \
 
 ## Inference 
 
+After getting the trained model, please inference by:
+
 ```shell
 # Orig-NNS inference 
 python  nns/run/nns_infer.py \
@@ -136,11 +138,61 @@ python  nns/run/nns_infer.py \
 --destroyStrategy  Adaptive \
 --neighborSize 16 \
 --infer_time 300 \
---config nns/config/random-32-32-20.yaml \
+--config nns/config/random-32-32-20_best.yaml \
 --shortest_path_folder data/example/shortest_path \
 --num_subset 100
 
 ```
 
+To get the benchmark results for Orig-NNS and Our-NNS, please set the value of each parameter as follow:
 
 
+| Method   | Map                | Agent | replan_solver | destroyStrategy | neighborSize |
+|----------|--------------------|-------|---------------|-----------------|--------------|
+| Orig-NNS |        empty-32-32 | all   | pbs           | Random          | 50           |
+| Orig-NNS |random-32-32-20     | all  | pbs           | RandomWalkLarge | 25           |
+| Orig-NNS |warehouse-10-20-10-2-1 | all | pbs           | RandomWalkLarge | 25           |
+| Orig-NNS |ost003d             | all   | pbs           | RandomWalkLarge | 10           |
+| Orig-NNS |den520d             | all   | pbs           | RandomWalkLarge | 25           |
+| Orig-NNS |Paris_1_256         | all   | pbs           | RandomWalkLarge | 25           |
+| Our-NNS  |empty-32-32         | 300   | pp           | RandomWalk      | 16           |
+| Our-NNS  |empty-32-32         | 350   | pp           | RandomWalk      | 16           |
+| Our-NNS  |empty-32-32         | 400   | pp           | Adaptive        | 8            |
+| Our-NNS  |empty-32-32         | 450   | pp           | RandomWalk      | 8            |
+| Our-NNS  |empty-32-32         | 500   | pp           | RandomWalk      | 8            |
+| Our-NNS  |random-32-32-20     | 150   | pp           | Adaptive        | 16           |
+| Our-NNS  |random-32-32-20     | 200   | pp           | RandomWalk      | 16           |
+| Our-NNS  |random-32-32-20     | 250   | pp           | RandomWalk      | 8            |
+| Our-NNS  |random-32-32-20     | 300   | pp           | RandomWalk      | 8            |
+| Our-NNS  |random-32-32-20     | 350   | pp           | RandomWalkProb  | 8            |
+| Our-NNS  |warehouse-10-20-10-2-1 | 150 | pp           | Adaptive        | 16           |
+| Our-NNS  |warehouse-10-20-10-2-1 | 200 | pp           | Adaptive        | 16           |
+| Our-NNS  |warehouse-10-20-10-2-1 | 250 | pp           | Adaptive        | 32           |
+| Our-NNS  |warehouse-10-20-10-2-1 | 300 | pp           | RandomWalk      | 16           |
+| Our-NNS  |warehouse-10-20-10-2-1 | 350 | pp           | RandomWalk      | 16           |
+| Our-NNS  |ost003d             | 200   | pp           | RandomWalkProb  | 16           |
+| Our-NNS  |ost003d             | 300   | pp           | RandomWalkProb  | 16           |
+| Our-NNS  |ost003d             | 400   | pp           | RandomWalkProb  | 16           |
+| Our-NNS  |ost003d             | 500   | pp           | RandomWalkProb  | 8            |
+| Our-NNS  |ost003d             | 600   | pp           | RandomWalkProb  | 8            |
+| Our-NNS  |den520d             | 500   | pp           | RandomWalkProb  | 16           |
+| Our-NNS  |den520d             | 600   | pp           | RandomWalkProb  | 16           |
+| Our-NNS  |den520d             | 700   | pp           | RandomWalkProb  | 16           |
+| Our-NNS  |den520d             | 800   | pp           | RandomWalkProb  | 16           |
+| Our-NNS  |den520d             | 900   | pp           | RandomWalkProb  | 16           |
+| Our-NNS  |Paris_1_256         | 350   | pp           | RandomWalkProb  | 32           |
+| Our-NNS  |Paris_1_256         | 450   | pp           | RandomWalkProb  | 32           |
+| Our-NNS  |Paris_1_256         | 550   | pp           | RandomWalkProb  | 32           |
+| Our-NNS  |Paris_1_256         | 650   | pp           | RandomWalkProb  | 16           |
+| Our-NNS  |Paris_1_256         | 750   | pp           | RandomWalkProb  | 16           |
+
+
+
+
+<!-- TODO -->
+
+
+## Checkpoint
+
+Trained check point for Orig-NNS can be found on [Orig-NNS-download]().
+Trained check point for Our-NNS can be found on [Our-NNS-download]().
