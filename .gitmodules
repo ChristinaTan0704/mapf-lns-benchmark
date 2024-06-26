@@ -12,3 +12,6 @@
 [submodule "exe/orig-lns2"]
 	path = exe/orig-lns2
 	url = https://github.com/ChristinaTan0704/MAPF-LNS2.git
+[submodule "exe/pbs-replan"]
+	path = exe/pbs-replan
+	url = git@github.com:ChristinaTan0704/PBS-LNS.git
