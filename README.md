@@ -63,8 +63,8 @@ pip install -r requirements.txt
 
 
 ## Data preparation
-<!-- TODO update here -->
-TODO: will be updated by June 25th, 2024
+
+Please check [data preparation](docs/data.md) for how to download the input data and SVM validation data.
 
 ## Methods
 
@@ -86,9 +86,10 @@ TODO: will be updated by June 25th, 2024
 TODO: will be updated by June 25th, 2024
 
 
-## Acknowledgements
-TODO: will be updated by June 25th, 2024
-<!-- TODO update here We're grateful to the open-source projects below, their great work made our project possible: -->
+<!-- ## Acknowledgements
+We're grateful to the open-source projects below, their great work made our project possible. -->
+
+
 
 <!-- 
 ## Citation

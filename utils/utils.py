@@ -1,6 +1,67 @@
 import json
 import torch
 import numpy as np
+from collections import defaultdict
+
+
+def get_idx_from_agentPaths(agent_paths=None, spatial_pool=4, temporal_pool=4, cutoff=100, map_w=100, map_h=100):
+    
+    if spatial_pool != 1:
+        feature_w = int(np.round(map_w / spatial_pool)) + 1
+        feature_h = int(np.round(map_h / spatial_pool)) + 1
+    else:
+        feature_w = map_w
+        feature_h = map_h
+    
+    if temporal_pool != 1:
+        feature_t = int(np.round(cutoff / temporal_pool)) + 1
+    else:
+        feature_t = cutoff
+    
+    agent_num = len(agent_paths)
+    agent_locs = np.zeros((agent_num, feature_t)) - 1 # -1 means there's no agent at the location
+    time_locs = defaultdict(list)
+    for agent, path in agent_paths.items():
+        for t, one_loc in enumerate(path):
+            t_ = int(np.round(t / temporal_pool))
+            if t_ >= feature_t:
+                break
+            time_locs[t_].append(one_loc)
+            x, y = one_loc
+            x = int(np.round(x / spatial_pool))
+            y = int(np.round(y / spatial_pool))
+            agent_locs[int(agent)][t_] = x*feature_w + y
+    
+    flatMap_t = np.zeros((feature_w*feature_h , feature_t)) # 0 means the location is not occupied 
+    for t_, loc_list in time_locs.items():
+        for loc in loc_list:
+            x, y = loc
+            x = int(np.round(x / spatial_pool))
+            y = int(np.round(y / spatial_pool))
+            flatMap_t[x*feature_w + y, t_] = 1
+    
+    agent_locs_mask = agent_locs == -1 # For a binary mask, a True value indicates that the corresponding position is not allowed to attend
+    return flatMap_t, agent_locs, agent_locs_mask 
+
+
+def downsample_obstacle_map(obstacle_map=None, spatial_pool=4):
+    """_summary_
+
+    Args:
+        obstacle_map : map_w * map_h; True for obstacle, False for free space
+        spatial_pool : downsample the map by spatial_pool
+    Returns:
+        downsampled + flattened, obstacle map; shape : (feature_w * feature_h, 1)
+    """
+    
+    
+    from scipy.ndimage import maximum_filter
+    pooled_map = maximum_filter(obstacle_map, size=spatial_pool, mode='constant', cval=0)
+    pooled_map = pooled_map[::spatial_pool, ::spatial_pool]
+    
+    return np.expand_dims(pooled_map.flatten(), axis=-1)
+
+
 
 def rank_list(input_list):
     arr = np.array(input_list)
