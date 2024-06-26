@@ -29,7 +29,7 @@ You can find more details and explanations for all parameters with:
 python data/generate_init_state.py --help
 ```
 
-The number of scenes (`scene_end_idx - scene_start_idx`) used for collect the training data for Orig-NNS and Our-NNS is shown in the table below:
+The number of scenes (`scene_end_idx - scene_start_idx`) used for collect the training data for Orig-NNS and Our-NNS is shown in the `Scene` column in [NNS configuration table](#nns-config-table).
 
 
 
@@ -71,6 +71,7 @@ python nns/run/data_collection.py \
 
 
 The data collection configuration for getting NNS-ours and NNS-orig is shown in the table below:
+<a name="nns-config-table"></a>
 
 |  Method  |         Map |    Agent   |  Scene     |--destroyStrategy  | --neighborSize | --replan_solver |  --max_iter |
 |:--------:|:-----------:|:----------:|:----------:|:-----------------:|:------------:|:-------------:|:---------:| 
