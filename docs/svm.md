@@ -55,6 +55,8 @@ python svm/svm_run.py --option infer \
 # Parameter Setup for Benchmark Result
 To get the benchmark results for SVM-Orig and SVM-Our, please set the value of each parameter as follow:
 
+
+
 ## Training Configuration
 
 
@@ -103,3 +105,9 @@ To get the benchmark results for SVM-Orig and SVM-Our, please set the value of e
 |  Our-SVM | Paris_1_256 | 550 | RandomWalkProb | / | 0 | 32 |
 |  Our-SVM | Paris_1_256 | 650 | RandomWalkProb | / | 0 | 16 |
 |  Our-SVM | Paris_1_256 | 750 | RandomWalkProb | / | 0 | 16 |
+
+
+## Checkpoint
+
+Trained check point for Orig-SVM can be found on [orig-svm-download]().
+Trained check point for Our-SVM can be found on [out-svm-download]().
