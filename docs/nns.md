@@ -73,7 +73,7 @@ python nns/run/data_collection.py \
 The data collection configuration for getting NNS-ours and NNS-orig is shown in the table below:
 <a name="nns-config-table"></a>
 
-|  Method  |         Map |    Agent   |  Scene     |--destroyStrategy  | --neighborSize | --replan_solver |  --max_iter |
+|  Method  |         Map |    Agent   |  Scene     |`--destroyStrategy`  | `--neighborSize` | `--replan_solver` |  `--max_iter` |
 |:--------:|:-----------:|:----------:|:----------:|:-----------------:|:------------:|:-------------:|:---------:| 
 | Orig-NNS | empty-32-32 |     350    |      5000| Random      |      50      |       pbs      |     50    |
 | Orig-NNS | random-32-32-20 |     250    |  5000|     RandomWalkLarge      |      25      |       pbs      |     50    |
