@@ -8,6 +8,29 @@ This is the implementation of [Anytime Multi-Agent Path Finding via Machine Lear
 
 ## Training 
 
+**Step 1:** Generate more initial states for training. For our benchmark and the [orignal paper](https://taoanhuang.github.io/files/aaai22.pdf), it generate 16 scenes for training.
+
+
+```shell
+python data/generate_init_state.py \
+--map_path data/example/random-32-32-20.map \
+--scene_folder data/scene \
+--scene_start_idx 0 \
+--scene_end_idx 1 \
+--agent_num 250 
+```
+- map_path (required): the .map file downloaded from the MAPF benchmark
+- scene_folder (required): the folder that stores the .scen files downloaded from the MAPF benchmark
+- agent_num (required): number of agents in the scene
+- scene_start_idx (optional): the start index of the scenes to be generated
+- scene_end_idx (optional): the end index of the scenes to be generated
+
+
+You can find more details and explanations for all parameters with:
+```shell
+python data/generate_init_state.py --help
+```
+**Step 2** Train the model by:
 
 ```python
 python svm/svm_run.py --option train \
@@ -19,7 +42,6 @@ python svm/svm_run.py --option train \
 --num_subset 20  --uniformNB 1 --destroyStrategy Adaptive
 
 ```
-
 
 - `--option` : train or infer
 - `--initial_state` : the initial state of the training data
@@ -35,6 +57,8 @@ python svm/svm_run.py --option train \
 - `--neighborSize` : neighbourhood size of the specified removal strategy, used when `uniformNB` is 0
 
 ## Inference 
+
+After training the model, pick the one with best validation score and inference by:
 
 ```python
 python svm/svm_run.py --option infer \

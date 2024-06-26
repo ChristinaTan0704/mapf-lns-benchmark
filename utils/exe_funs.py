@@ -16,20 +16,7 @@ from collections import OrderedDict
 
 
 def pbs_replan(pbs_exe_path="", replanAgents=[], input_map="", agentNum=0, state=""):
-    """_summary_
 
-    Args:
-        pbs_exe_path (str) : path to the executable pbs exe
-        replanAgents (list, optional): list of agents to be replanned
-        input_map (str, optional): path to the map file
-        agentNum (int, optional): number of agents
-        state (str, optional): path to the state file
-
-    Returns:
-        _type_: _description_
-    """
-    
-    
     # --state --replanAgents --map --agentNum --cutoffTime 20
     cpp_command = "{} --map {} --agentNum {} --state {} --cutoffTime 20 --replanAgents {} ".format(pbs_exe_path, input_map, agentNum, state, " ".join([str(i) for i in replanAgents]))
     print("pbs command: ", cpp_command)
@@ -75,20 +62,11 @@ def pbs_replan(pbs_exe_path="", replanAgents=[], input_map="", agentNum=0, state
 
 
 
-def cpp_removal_Open(exe, state="", adaptive_weight=[1,1,0], replantime_limit = 0.6):
-    """
-    Call the C++ executable to generate the subset, NOTE : input one state at a time
-    Required input:
-    --exe_path: path to the executable file
-    --map: map file
-    --adaptive_weight: weight for adaptive removal
-    --pprun: number of PP replan
-    --num_subset: number of subset
-    --uniform_neighbor: (0) fixed neighbor (1) uniform sample neighbor from {2, 4, 8, 16, 32} (2) uniform sample neighbor from 5~16
-    """
+def cpp_removal_Open(exe, state="", adaptive_weight=[1,1,0]):
+
     succ = False
     while not succ:
-        cpp_input = "--state {} --adaptive_weight {} --replanTime {} \n".format(state, " ".join([str(i) for i in adaptive_weight]), replantime_limit)
+        cpp_input = "--state {} --adaptive_weight {} ".format(state, " ".join([str(i) for i in adaptive_weight]))
         
         print("cpp_input: ", cpp_input)
         # To send data to the C++ process

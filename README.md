@@ -68,6 +68,8 @@ Please check [data preparation](docs/data.md) for how to download the input data
 
 ## Methods
 
+
+
 ### Rule-based 
 
 Please check the [instruction](https://github.com/ChristinaTan0704/mapf-lns-exe/blob/rule-based/README.md) of submodule `exe/lns-rule-based` for how to implement the rule-based results.

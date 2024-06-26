@@ -195,6 +195,10 @@ def pairwise_hinge_ranking_loss(predictions, targets):
     return loss
 
 
+def tail(file_path, lines_to_read=10):
+    """Read the last few lines of a very large file without loading it entirely."""
+    command = "cat {} | tail -n {}".format(file_path, lines_to_read)
+    return os.popen(command).read().split("\n")
 
 
 def read_json(json_path):
