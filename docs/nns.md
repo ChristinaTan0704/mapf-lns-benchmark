@@ -147,7 +147,7 @@ python  nns/run/nns_infer.py \
 To get the benchmark results for Orig-NNS and Our-NNS, please set the value of each parameter as follow:
 
 
-| Method   | Map                | Agent | replan_solver | destroyStrategy | neighborSize |
+| Method   | Map                | Agent | --replan_solver | --destroyStrategy | --neighborSize |
 |----------|--------------------|-------|---------------|-----------------|--------------|
 | Orig-NNS |        empty-32-32 | all   | pbs           | Random          | 50           |
 | Orig-NNS |random-32-32-20     | all  | pbs           | RandomWalkLarge | 25           |
