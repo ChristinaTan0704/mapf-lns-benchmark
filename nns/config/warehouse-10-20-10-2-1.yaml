@@ -1,0 +1,16 @@
+input :
+    map_size: 10143 # 32*32
+    map_w : 161
+    map_h : 63
+    feature_w: 161 # feature_w = round(map_w / spatial_w) + 1
+    feature_h: 63 # feature_h = round(map_h / spatial_h) + 1
+    feature_t : 49 # feature_t = round(time_cutoff / temporal) + 1
+network :
+    num_heads : 2
+    feed_forward_factor : 4 # d_model, n_head, feedforward_factor // self.dim_feedforward = feedforward_factor * d_model
+    sub_num_heads : 2
+    sub_feed_forward_factor : 4 # d_model, n_head, feedforward_factor // self.dim_feedforward = feedforward_factor * d_model
+    sub_layers : 3
+    subset_agent_max : 25
+    in_channels : [16, 16, 32, 64]
+    out_channels : [16, 32, 64, 128]
