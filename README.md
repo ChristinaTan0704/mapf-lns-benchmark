@@ -73,7 +73,6 @@ Please check [data preparation](docs/data.md) for how to download the input data
 Please check the [instruction](https://github.com/ChristinaTan0704/mapf-lns-exe/blob/rule-based/README.md) of submodule `exe/lns-rule-based` for how to implement the rule-based results.
 
 ### Learning-based
-TODO: will be updated by June 25th, 2024
 
 #### SVM
 
