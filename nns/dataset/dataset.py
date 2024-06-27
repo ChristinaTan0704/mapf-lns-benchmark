@@ -2,13 +2,7 @@ import torch
 from torch.utils.data import Dataset
 from utils import *
 import numpy as np
-from tqdm import tqdm
-import time
-import re
-import os
 
-
-# Define the dataset class
 class NssDataset(Dataset):
     def __init__(self, data=""): 
         self.file_list = read_txt(data)

@@ -214,8 +214,6 @@ def gen_svm_feature(selected_agent_set, instance, shortest_path_data, map_degree
     agent_delay_ratio = np.zeros(agent_num)
     agent_delay = np.zeros(agent_num)
     for i in range(agent_num):
-        if shortest_path_data[str(i)][0] == 0:
-            import pdb; pdb.set_trace()
         agent_delay[i] =  len(paths[i]) - shortest_path_data[str(i)][0]
         agent_delay_ratio[i] = len(paths[i]) / shortest_path_data[str(i)][0]
     

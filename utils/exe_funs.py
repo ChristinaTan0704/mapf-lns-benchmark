@@ -95,8 +95,6 @@ def pbs_replan(pbs_exe_path="", replanAgents=[], input_map="", agentNum=0, state
                     path = re.findall("\((\d+),(\d+)\)", cpp_output[line_idx])
                     path = [(int(i[0]), int(i[1])) for i in path]
                     agnet_paths[agent_id] = path
-    if replaned_cost is None:
-        import pdb; pdb.set_trace()
     
     if replaned_cost < 0: # over time limit
         improvement = 0
@@ -154,13 +152,7 @@ def cpp_removal_Open(exe, state="", adaptive_weight=[1,1,0]):
                 if "destroy_strategy:" in one_info[line_idx]:
                     one_info_dict["destroy_strategy"] = int(re.findall(r'destroy_strategy: (.*?)$', one_info[line_idx])[0])
                 if "removal_set:" in one_info[line_idx]:
-                    try:
-                        one_info_dict["removal_set"] = tuple(sorted([int(i) for i in re.findall(r'removal_set: (.*?)$', one_info[line_idx])[0].split()]))
-                    except:
-                        print("error in removal_set: ", one_info[line_idx])
-                        import pdb; pdb.set_trace() 
-            if len(one_info_dict["removal_set"]) == 0:
-                import pdb; pdb.set_trace()
+                    one_info_dict["removal_set"] = tuple(sorted([int(i) for i in re.findall(r'removal_set: (.*?)$', one_info[line_idx])[0].split()]))
             if one_info_dict["removal_set"] not in iterInfo["removalSet_info"]:
                 iterInfo["removalSet_info"].update({one_info_dict["removal_set"]: {"removal_time": one_info_dict["removal_time"], "destroy_strategy": one_info_dict["destroy_strategy"]}})
             else:
@@ -228,11 +220,7 @@ def cpp_removal_replanOpen(exe, state="", adaptive_weight=[1,1,0]):
                 if "destroy_strategy:" in one_info[line_idx]:
                     one_info_dict["destroy_strategy"] = int(re.findall(r'destroy_strategy: (.*?)$', one_info[line_idx])[0])
                 if "removal_set:" in one_info[line_idx]:
-                    try:
-                        one_info_dict["removal_set"] = tuple(sorted([int(i) for i in re.findall(r'removal_set: (.*?)$', one_info[line_idx])[0].split()]))
-                    except:
-                        print("error in removal_set: ", one_info[line_idx])
-                        import pdb; pdb.set_trace() 
+                    one_info_dict["removal_set"] = tuple(sorted([int(i) for i in re.findall(r'removal_set: (.*?)$', one_info[line_idx])[0].split()]))
                 if "average_improvement:" in one_info[line_idx]:
                     one_info_dict["avg_improvement"] = float(re.findall(r'average_improvement: (.*?)$', one_info[line_idx])[0])
                 if "new paths start" in one_info[line_idx]:
@@ -257,10 +245,8 @@ def cpp_removal_replanOpen(exe, state="", adaptive_weight=[1,1,0]):
             succ = False
             print("subset number is 0, regenerate the subset")
             print(cpp_output)
-            import pdb; pdb.set_trace()
     
     return state, iterInfo, exe
-  
   
   
 

@@ -1,12 +1,7 @@
 import torch
 import torch.nn as nn
-import torch.optim as optim
 import torch.nn.functional as F
-import random
-import torch.distributed as dist
-from torch.nn.parallel import DistributedDataParallel as DDP
 import math
-import numpy as np
 
 class MultiheadAttention(nn.Module):
     def __init__(self, embed_dim, num_heads, dropout=0.):
@@ -131,86 +126,13 @@ class NNS(nn.Module):
             subset_mask : shape [batch_size, subset_num, self.subset_agent_max], if subset_mask[batch_idx, subset_idx, agent_idx] = 1;
                             there is an agent in subagents_idx[batch_idx, subset_idx, agent_idx] is in the subset.
         """
-        # TODO add back
         
         curr_paths, agent_paths_idx, agent_paths_mask, shortest_path, obstacle, subagents_idx, subset_mask = batch_data
         batch_size, subset_num, subset_agent_num, = subagents_idx.shape
         _, num_agents, _ = agent_paths_idx.shape
         device = curr_paths.device
         assert subset_agent_num == self.subset_agent_max, "padded subset size doesn't match subset_num {} vs self.subset_agent_max {}".format(subset_agent_num, self.subset_agent_max)
-        
-        """
-        # TODO specify the input data later
-        device = 'cpu'
-        batch_size = 16
-        
-        # self.feature_t = 48
-        # self.feature_ = 1024
-        num_agents = 900
-        # self.subset_agent_max = 20
-        subset_num = 100
-        curr_paths = torch.zeros((batch_size, self.feature_, self.feature_t), dtype=torch.int)
-        
-        for batch_idx in range(batch_size):
-            for time_idx in range(self.feature_t):
-                for loc_idx in range(self.feature_):
-                    curr_paths[batch_idx, loc_idx, time_idx] = random.randint(0, 1)
-        curr_paths = curr_paths.to(device)  
-                    
-                    
-        shortest_path = torch.zeros((batch_size, self.feature_, self.feature_t), dtype=torch.int)
-        for batch_idx in range(batch_size):
-            for time_idx in range(self.feature_t):
-                for loc_idx in range(self.feature_):
-                    shortest_path[batch_idx, loc_idx, time_idx] = random.randint(0, 1)
-        shortest_path = shortest_path.to(device)
-        
-        obstacle = torch.zeros((batch_size, self.feature_, 1), dtype=torch.int)
-        for batch_idx in range(batch_size):
-            for time_idx in range(1):
-                for loc_idx in range(self.feature_):
-                    obstacle[batch_idx, loc_idx, time_idx] = random.randint(0, 1)
-        obstacle = obstacle.to(device)
-                    
-        agent_paths = []
-        agent_paths_mask = torch.zeros((batch_size, num_agents, self.feature_t), dtype=torch.bool)
-        for batch_idx in range(batch_size):
-            one_agentSet_path = []
-            for agent_idx in range(num_agents):
-                    path_len = random.randint(1, self.feature_t)
-                    one_path = []
-                    agent_paths_mask[batch_idx, agent_idx][path_len:] = True
-                    for time_idx in range(self.feature_t):
-                        if time_idx < path_len: # [batch_size, self.feature_, self.feature_t, dim] 
-                            loc_idx = random.randint(0, self.feature_ - 1)
-                            one_path.append([loc_idx])
-                        else:
-                            one_path.append([loc_idx])
-                    one_agentSet_path.append(one_path)
-            agent_paths.append(one_agentSet_path)
-        agent_paths = torch.tensor(agent_paths, dtype=torch.long , device=device)
-        agent_paths_mask = agent_paths_mask.to(device)
-        
-        
-        
-        subagents_idx = torch.zeros((batch_size, subset_num, self.subset_agent_max))
-        subset_mask = torch.zeros((batch_size, subset_num, self.subset_agent_max), dtype=torch.bool)
-        for batch_idx in range(batch_size):
-            for subset_idx in range(subset_num):
-                try:
-                    one_set_size = random.randint(10, self.subset_agent_max)
-                except:
-                    import pdb; pdb.set_trace()
-                # agents = np.random.choice(num_agents, one_set_size, replace=False)
-                subagents_idx[batch_idx, subset_idx] += torch.tensor([random.randint(0, num_agents - 1) for _ in range(one_set_size)] + [0] * (self.subset_agent_max - one_set_size))
-                subset_mask[batch_idx][subset_idx][one_set_size:] = True
-        subagents_idx = torch.tensor(subagents_idx, dtype=torch.long , device=device)
-        subset_mask = torch.tensor(subset_mask, dtype=torch.bool, device=device)
-        agent_paths_idx = agent_paths
-        
-        # TODO del the above
-        
-        """
+
         curr_paths_idx = curr_paths.nonzero(as_tuple=False)
         shortest_path_idx = shortest_path.nonzero(as_tuple=False)
         obstacle_idx = obstacle.nonzero(as_tuple=False)  
