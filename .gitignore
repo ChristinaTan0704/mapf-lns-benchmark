@@ -2,3 +2,4 @@ data/svm/train/*
 output/*
 *__pycache__*
 *.zip
+checkpoint/*

@@ -18,7 +18,6 @@
 
 
 
-<!-- TODO add some intro and link -->
 This repository provides the official implementation of the paper [Benchmarking Large Neighborhood Search for Multi-Agent Path Finding](). 
 
 
@@ -96,14 +95,5 @@ For instreuctions on how to train and inference NNS-LNS, please follow [NNS-LNS 
 The executable for generating bandit results can be found in the submodule under `exe/bandit`. For instreuctions on how to train and inference bandit, please follow [bandit implementation](https://github.com/ChristinaTan0704/anytime-mapf/blob/main/README.md).
 
 
-<!-- ## Acknowledgements
-We're grateful to the open-source projects below, their great work made our project possible. -->
-
-
-
-<!-- 
-## Citation
-TODO: will be updated by June 25th, 2024
-If you find our work useful in your research or applications, please consider citing:
-
--->
+## Acknowledgements
+Thanks to the open-source projects [MAPF-LNS](https://github.com/Jiaoyang-Li/MAPF-LNS), [MAPF-LNS2](https://github.com/Jiaoyang-Li/MAPF-LNS2), [lacam2](https://github.com/Kei18/lacam2), [bandit](https://github.com/thomyphan/anytime-mapf), and the model reference from [NNS](https://github.com/mit-wu-lab/mapf_neural_neighborhood_search/tree/main), we were able to align many details for comparison between different methods, making our project possible.
