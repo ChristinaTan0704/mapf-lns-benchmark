@@ -12,17 +12,26 @@ unzip mapf-map.zip -d map
 unzip mapf-scen-random.zip && mv scen-random scene
 ```
 
-After this, the data structure should looks like:
+
+
+
+# Download SVM Data
+
+
+To train SVM, we need to have 16 randomly generated initial states, and validation data extracted from another 4 states. Please download the data from [svm data download](https://www.dropbox.com/scl/fo/hkngdqqltjsgvntus3g1j/AK14d2MgAJPSsH9bO1ynSIE?rlkey=brv71d4sddjmwzl4jw69dyhql&st=4b07c873&dl=0).
+
+
+
+
+The data structure after the above steps will looks like:
 ```
-maptracker
-├── mmdetection3d
-    ├── example
-    ├── generate_init_state.py
+mapf-lns-benchmark
+└── data
     ├── map
     ├── scene
     └── svm
+        ├── train
+        ├── train_shortest_path
+        └── val
 
 ```
-
-
-# Download SVM Validation Data

@@ -135,5 +135,5 @@ To get the benchmark results for Orig-SVM and Our-SVM, please set the value of e
 
 ## Checkpoint
 
-Trained check point for Orig-SVM can be found on [Orig-SVM-download]().
-Trained check point for Our-SVM can be found on [Our-SVM-download]().
+Trained check point for Orig-SVM can be found on [Orig-SVM-download](https://www.dropbox.com/scl/fo/hswapqekyohlmnkfwu4lo/AINqa_wl59DWPLPZzJVWefs?rlkey=zksu2k1z3o5eq7b7jx91i5t0a&st=mjqreh7g&dl=0).
+Trained check point for Our-SVM can be found on [Our-SVM-download](https://www.dropbox.com/scl/fo/qkbv1ktgdtw3i3dae7v1g/AIk1GQtmL8aHaQX2D1Dik4E?rlkey=2alzg26h3by0hz4gvbmcbhkxu&st=d68elp01&dl=0).
