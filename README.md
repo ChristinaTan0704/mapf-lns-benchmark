@@ -13,7 +13,7 @@
 
 
 <p align="center">
-    <img src="[http://aspis.cmpt.sfu.ca/projects/mirrors/mirror3d_zip_release/img/readme_img/network-arch-cr-new.jpg](https://github.com/ChristinaTan0704/mapf-lns-benchmark/blob/main/docs/runtime_plot.pdf)">
+    <img src="https://github.com/ChristinaTan0704/mapf-lns-benchmark/blob/main/docs/runtime_delay.jpg">
 </p>
 
 
