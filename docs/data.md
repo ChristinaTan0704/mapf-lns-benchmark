@@ -12,7 +12,10 @@ unzip mapf-map.zip -d map
 unzip mapf-scen-random.zip && mv scen-random scene
 ```
 
+# Download Initial States
 
+For MAPF-LNS2 initialied state, please downlowd from [lns2 init](https://www.dropbox.com/scl/fi/n2ymplfot8sam3ilw03bo/lns2_init_states.zip?rlkey=jkxqaai78yy5ny9hefz0fe4ly&st=3oghuigi&dl=0).
+For LACAM2 initialied state, please downlowd from [lacam2 init](https://www.dropbox.com/scl/fi/3gkz38e859np4iox1bvau/lacam2_init_states.zip?rlkey=me4sfxfb8k99q8hp92kj4tuvk&st=8ziwj0hi&dl=0).
 
 
 # Download SVM Data
