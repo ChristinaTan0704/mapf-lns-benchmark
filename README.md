@@ -63,15 +63,14 @@ conda create --name mapf python=3.9.1
 conda activate mapf
 # Install pytorch
 pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
-# Install other requirements 
+# Install other requirements
 pip install -r requirements.txt
 ```
 
 
 ## Data preparation
 
-Please check [data preparation](docs/data.md) for how to download the input data and SVM validation data.
-
+Please check [data preparation](docs/data.md) for how to download the data.
 ## Methods
 
 
@@ -84,16 +83,16 @@ The executable for generating rule-based results can be found in the submodule u
 
 #### SVM
 
-For instreuctions on how to train and inference SVM-LNS, please follow [SVM-LNS implementation](docs/svm.md).
+For instreuctions on how to train and infer SVM-LNS, please follow [SVM-LNS implementation](docs/svm.md).
 
 #### Neural
 
-For instreuctions on how to train and inference NNS-LNS, please follow [NNS-LNS implementation](docs/nns.md).
+For instreuctions on how to train and infer NNS-LNS, please follow [NNS-LNS implementation](docs/nns.md).
 
 #### Bandit
 
-The executable for generating bandit results can be found in the submodule under `exe/bandit`. For instreuctions on how to train and inference bandit, please follow [bandit implementation](https://github.com/ChristinaTan0704/anytime-mapf/blob/main/README.md).
+The executable for generating bandit results can be found in the submodule under `exe/bandit`. For instructions on how to infer bandit, please follow [bandit implementation](https://github.com/ChristinaTan0704/anytime-mapf/blob/main/README.md).
 
 
 ## Acknowledgements
-Thanks to the open-source projects [MAPF-LNS](https://github.com/Jiaoyang-Li/MAPF-LNS), [MAPF-LNS2](https://github.com/Jiaoyang-Li/MAPF-LNS2), [lacam2](https://github.com/Kei18/lacam2), [bandit](https://github.com/thomyphan/anytime-mapf), and the model reference from [NNS](https://github.com/mit-wu-lab/mapf_neural_neighborhood_search/tree/main), we were able to align many details for comparison between different methods, making our project possible.
+Thanks to the open-source projects [MAPF-LNS](https://github.com/Jiaoyang-Li/MAPF-LNS), [MAPF-LNS2](https://github.com/Jiaoyang-Li/MAPF-LNS2), [lacam2](https://github.com/Kei18/lacam2), [bandit](https://github.com/thomyphan/anytime-mapf), and the model reference from [NNS](https://github.com/mit-wu-lab/mapf_neural_neighborhood_search/tree/main) that we were able to align many details for comparison between different methods, making our project possible.
