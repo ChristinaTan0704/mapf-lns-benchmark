@@ -8,7 +8,7 @@ This is the implementation of [Neural Neighborhood Search for Multi-agent Path F
 
 ## Data Collection
 
-**Step 1:** Generate more initial states for data collection.
+**Step 1** Generate more initial states for data collection.
 ```shell
 python data/generate_init_state.py \
 --map_path data/example/random-32-32-20.map \
@@ -29,12 +29,12 @@ You can find more details and explanations for all parameters with:
 python data/generate_init_state.py --help
 ```
 
-The number of scenes (`scene_end_idx - scene_start_idx`) used for collect the training data for Orig-NNS and Our-NNS is shown in the `Scene` column in [NNS configuration table](#nns-config-table).
+The number of scenes (`scene_end_idx - scene_start_idx`) used for collecting the training data for Orig-NNS and Our-NNS is shown in the `Scene` column in [NNS configuration table](#nns-config-table).
 
 
 
 
-**Step 2** Collect NNS training data. The training data will be save in npz files.
+**Step 2** Collect NNS training data. The training data will be saved in npz files.
 ```shell
 # Collect NNS training data with PBS as replan solver
 python nns/run/data_collection.py \
@@ -59,13 +59,13 @@ python nns/run/data_collection.py \
 
 - `replan_solver` (required): the option for data collection, which can be either pbs or pp
 - `initial_state` (required): the path to the initial state file
-- `output_folder` (optional): the folder to stored the generated data
+- `output_folder` (optional): the folder to store the generated data
 - `gen_subset_exe` (required): the path to the executable file for generating subsets
 - `pbs_replan_exe` (required): the path to the executable file for PBS replan
 - `destroyStrategy` (optional): the strategy for destroying the current state
 - `--num_subset` (optional): the number of subset
-- `--destroyStrategy` (optional): LNS destory strategy
-- `--neighborSize` (optional): neighbourhood size of the specified removal 
+- `--destroyStrategy` (optional): LNS destroy strategy
+- `--neighborSize` (optional): neighborhood size of the specified removal 
 - `--max_iter` (optional): the maximum number of LNS iterations for the data collection
 
 
@@ -88,7 +88,7 @@ The data collection configuration for getting NNS-ours and NNS-orig is shown in 
 | Our-NNS | den520d |     700    |   200|    RandomWalkProb      |      16      |       pp      |     500    |
 | Our-NNS | Paris_1_256 |     450    |   350|    RandomWalkProb      |      32      |       pp      |     200    |
 
-**Step 3** Note down the path to the generated npz files in a txt for model input. See [data/example/nns_example_input.txt](data/example/nns_example_input.txt) as an example. 
+**Step 3** Note down the path to the generated npz files in a .txt file for model input. See [data/example/nns_example_input.txt](data/example/nns_example_input.txt) as an example. 
 
 ## Training 
 
@@ -108,7 +108,7 @@ python nns/run/nns_train.py \
 
 ## Inference 
 
-After getting the trained model, please inference by:
+After obtaining the trained model, please perform inference by:
 
 ```shell
 # Orig-NNS inference 
@@ -144,7 +144,7 @@ python  nns/run/nns_infer.py \
 
 ```
 
-To get the benchmark results for Orig-NNS and Our-NNS, please set the value of each parameter as follow:
+To get the benchmark results for Orig-NNS and Our-NNS, please set the value of each parameter as follows:
 
 
 | Method   | Map                | Agent | `--replan_solver` | `--destroyStrategy` | `--neighborSize` |
@@ -189,10 +189,9 @@ To get the benchmark results for Orig-NNS and Our-NNS, please set the value of e
 
 
 
-<!-- TODO -->
-
-
 ## Checkpoint
 
-Trained check point for Orig-NNS can be found on [Orig-NNS-download]().
-Trained check point for Our-NNS can be found on [Our-NNS-download]().
+The trained checkpoints for Orig-NNS is available at [Orig-NNS-download](https://www.dropbox.com/scl/fo/y7lns4q95mky2seerdkj6/ANx0ilKY7eDT_A6fJAOLdDU?rlkey=vx44zc76xd4o2qns7i154myv4&st=z11rj4q3&dl=0).
+The trained checkpoints for Our-NNS is available at [Our-NNS-download](https://www.dropbox.com/scl/fo/6wi7ucuatcg6jqcfezirr/AOrTyAgQ3wfGOKhQyE77vXg?rlkey=jojuiub2xamdhdkiptoec3vwe&st=tt842a2s&dl=0).
+
+

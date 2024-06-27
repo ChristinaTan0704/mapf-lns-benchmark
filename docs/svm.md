@@ -8,30 +8,9 @@ This is the implementation of [Anytime Multi-Agent Path Finding via Machine Lear
 
 ## Training 
 
-**Step 1:** Download the training data by following [Data Preparation](../data.md).
-
-<!-- Generate more initial states for training. For our benchmark and the [orignal paper](https://taoanhuang.github.io/files/aaai22.pdf), it generate 16 scenes for training.
+**Step 1** Download the training data by following [Data Preparation](../data.md).
 
 
-```shell
-python data/generate_init_state.py \
---map_path data/example/random-32-32-20.map \
---scene_folder data/scene \
---scene_start_idx 0 \
---scene_end_idx 1 \
---agent_num 250 
-```
-- map_path (required): the .map file downloaded from the MAPF benchmark
-- scene_folder (required): the folder that stores the .scen files downloaded from the MAPF benchmark
-- agent_num (required): number of agents in the scene
-- scene_start_idx (optional): the start index of the scenes to be generated
-- scene_end_idx (optional): the end index of the scenes to be generated
-
-
-You can find more details and explanations for all parameters with:
-```shell
-python data/generate_init_state.py --help
-``` -->
 **Step 2** Train the model by:
 
 ```python
@@ -50,17 +29,17 @@ python svm/svm_run.py --option train \
 - `--val_data_path` : the validation data path
 - `--shortest_path_folder` : the folder to store the shortest path
 - `--gen_subset_exe` : the path to the executable file to generate the subset
-- `--max_iter` : the maximum number of iteration
+- `--max_iter` : the maximum number of iterations
 - `--replan_time_limit` : the time limit for each replan
-- `--pprun` : the number of pprun
-- `--num_subset` : the number of subset
+- `--pprun` : the number of ppruns
+- `--num_subset` : the number of subsets
 - `--uniformNB` : (0) fixed nb_size specified by --neighborSize (1) nb_size sample from {2,4,8,16,32} (2) nb_size sample from 5~16
-- `--destroyStrategy` : LNS destory strategy
-- `--neighborSize` : neighbourhood size of the specified removal strategy, used when `uniformNB` is 0
+- `--destroyStrategy` : LNS destroy strategy
+- `--neighborSize` : neighborhood size of the specified removal strategy, used when `uniformNB` is 0
 
 ## Inference 
 
-After training the model, pick the one with best validation score and inference by:
+After training the model, select the one with the best validation score and perform inference using the following command:
 
 ```python
 python svm/svm_run.py --option infer \
@@ -79,9 +58,7 @@ python svm/svm_run.py --option infer \
 
 
 # Parameter Setup for Benchmark Result
-To get the benchmark results for Orig-SVM and Our-SVM, please set the value of each parameter as follow:
-
-
+To obtain the benchmark results for Orig-SVM and Our-SVM, configure each parameter as specified below:
 
 ## Training Configuration
 
@@ -135,5 +112,5 @@ To get the benchmark results for Orig-SVM and Our-SVM, please set the value of e
 
 ## Checkpoint
 
-Trained check point for Orig-SVM can be found on [Orig-SVM-download](https://www.dropbox.com/scl/fo/hswapqekyohlmnkfwu4lo/AINqa_wl59DWPLPZzJVWefs?rlkey=zksu2k1z3o5eq7b7jx91i5t0a&st=mjqreh7g&dl=0).
-Trained check point for Our-SVM can be found on [Our-SVM-download](https://www.dropbox.com/scl/fo/qkbv1ktgdtw3i3dae7v1g/AIk1GQtmL8aHaQX2D1Dik4E?rlkey=2alzg26h3by0hz4gvbmcbhkxu&st=d68elp01&dl=0).
+The trained checkpoints for Orig-SVM is available at [Orig-SVM-download](https://www.dropbox.com/scl/fo/hswapqekyohlmnkfwu4lo/AINqa_wl59DWPLPZzJVWefs?rlkey=zksu2k1z3o5eq7b7jx91i5t0a&st=mjqreh7g&dl=0).
+The trained checkpoints for Our-SVM is available at [Our-SVM-download](https://www.dropbox.com/scl/fo/qkbv1ktgdtw3i3dae7v1g/AIk1GQtmL8aHaQX2D1Dik4E?rlkey=2alzg26h3by0hz4gvbmcbhkxu&st=d68elp01&dl=0).
