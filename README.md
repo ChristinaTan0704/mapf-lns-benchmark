@@ -48,11 +48,11 @@ sudo apt update
 ```
 - Install the Eigen library (used for linear algebra computing)
  ```shell script
-    sudo apt install libeigen3-dev
+sudo apt install libeigen3-dev
  ```
 - Install the boost library 
  ```shell script
-    sudo apt install libboost-all-dev
+sudo apt install libboost-all-dev
  ```
 
 **Step 3** Create conda environment and install Python dependencies.
