@@ -12,5 +12,17 @@ unzip mapf-map.zip -d map
 unzip mapf-scen-random.zip && mv scen-random scene
 ```
 
+After this, the data structure should looks like:
+```
+maptracker
+├── mmdetection3d
+    ├── example
+    ├── generate_init_state.py
+    ├── map
+    ├── scene
+    └── svm
+
+```
+
 
 # Download SVM Validation Data
