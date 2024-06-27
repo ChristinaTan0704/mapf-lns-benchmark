@@ -11,6 +11,13 @@
 </div>
 
 
+
+<p align="center">
+    <img src="https://github.com/ChristinaTan0704/mapf-lns-benchmark/blob/main/docs/runtime_delay.jpg">
+</p>
+
+
+
 <!-- TODO add some intro and link -->
 This repository provides the official implementation of the paper [Benchmarking Large Neighborhood Search for Multi-Agent Path Finding](). 
 
