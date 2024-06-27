@@ -8,7 +8,9 @@ This is the implementation of [Anytime Multi-Agent Path Finding via Machine Lear
 
 ## Training 
 
-**Step 1:** Generate more initial states for training. For our benchmark and the [orignal paper](https://taoanhuang.github.io/files/aaai22.pdf), it generate 16 scenes for training.
+**Step 1:** Download the training data by following [Data Preparation](../data.md).
+
+<!-- Generate more initial states for training. For our benchmark and the [orignal paper](https://taoanhuang.github.io/files/aaai22.pdf), it generate 16 scenes for training.
 
 
 ```shell
@@ -29,7 +31,7 @@ python data/generate_init_state.py \
 You can find more details and explanations for all parameters with:
 ```shell
 python data/generate_init_state.py --help
-```
+``` -->
 **Step 2** Train the model by:
 
 ```python
@@ -77,7 +79,7 @@ python svm/svm_run.py --option infer \
 
 
 # Parameter Setup for Benchmark Result
-To get the benchmark results for SVM-Orig and SVM-Our, please set the value of each parameter as follow:
+To get the benchmark results for Orig-SVM and Our-SVM, please set the value of each parameter as follow:
 
 
 
@@ -133,5 +135,5 @@ To get the benchmark results for SVM-Orig and SVM-Our, please set the value of e
 
 ## Checkpoint
 
-Trained check point for Orig-SVM can be found on [orig-svm-download]().
-Trained check point for Our-SVM can be found on [out-svm-download]().
+Trained check point for Orig-SVM can be found on [Orig-SVM-download]().
+Trained check point for Our-SVM can be found on [Our-SVM-download]().
