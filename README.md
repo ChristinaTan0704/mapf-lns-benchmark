@@ -10,6 +10,8 @@
 
 </div>
 
+![runtime vs delay](docs/runtime_plot.pdf)
+
 
 <!-- TODO add some intro and link -->
 This repository provides the official implementation of the paper [Benchmarking Large Neighborhood Search for Multi-Agent Path Finding](). 
