@@ -27,7 +27,7 @@ This repository provides the official implementation of the paper [Benchmarking 
 - [Data preparation](#data-preparation)
 - [Methods](#methods)
 - [Acknowledgements](#acknowledgements)
-- [Citation](#citation)
+
 
 ## Introduction
 Multi-Agent Path Finding (MAPF) aims to arrange collision-free goal-reaching paths for a group of agents. Anytime MAPF solvers based on large neighborhood search (LNS) have gained prominence recently due to their flexibility and scalability. Neighborhood selection strategy is crucial to the success of MAPF-LNS and a flurry of methods have been proposed. 
@@ -81,15 +81,15 @@ The executable for generating rule-based results can be found in the submodule u
 
 ### Learning-based
 
-#### SVM
+- ### SVM
 
 For instreuctions on how to train and infer SVM-LNS, please follow [SVM-LNS implementation](docs/svm.md).
 
-#### Neural
+- ### Neural
 
 For instreuctions on how to train and infer NNS-LNS, please follow [NNS-LNS implementation](docs/nns.md).
 
-#### Bandit
+- ### Bandit
 
 The executable for generating bandit results can be found in the submodule under `exe/bandit`. For instructions on how to infer bandit, please follow [bandit implementation](https://github.com/ChristinaTan0704/anytime-mapf/blob/main/README.md).
 
