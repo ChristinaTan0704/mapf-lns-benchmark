@@ -1,6 +1,7 @@
 import os
 import numpy as np
 from utils import *
+import argparse
 
 def generate_random_scene_from_scen(args):
     import random
