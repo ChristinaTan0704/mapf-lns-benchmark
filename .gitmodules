@@ -5,10 +5,6 @@
 	path = exe/lns-removal-replan
 	url = https://github.com/ChristinaTan0704/mapf-lns-exe.git
 	branch = removal-replan
-[submodule "exe/lns-rule-based"]
-	path = exe/lns-rule-based
-	url = https://github.com/ChristinaTan0704/mapf-lns-exe.git
-	branch = rule-based
 [submodule "exe/orig-lns2"]
 	path = exe/orig-lns2
 	url = https://github.com/ChristinaTan0704/MAPF-LNS2.git
