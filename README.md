@@ -39,8 +39,12 @@ We conduct a fair comparison across prominent methods on the same benchmark and 
 
 **Step 1** Clone the repository with all submodules.
 ```shell
+# Clone the repo and submodules
 git clone --recurse-submodules https://github.com/ChristinaTan0704/mapf-lns-benchmark.git
+# For each submodue, checkout to the right branch
+git submodule foreach 'git checkout $(git config -f $toplevel/.gitmodules submodule.$name.branch || echo master)'
 ```
+
 **Step 2** Install BOOST (https://www.boost.org/) and Eigen (https://eigen.tuxfamily.org/). 
 
 ```shell script
