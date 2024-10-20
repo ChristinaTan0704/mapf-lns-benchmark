@@ -12,9 +12,11 @@
 [submodule "exe/orig-lns2"]
 	path = exe/orig-lns2
 	url = https://github.com/ChristinaTan0704/MAPF-LNS2.git
+	branch = init-LNS
 [submodule "exe/pbs-replan"]
 	path = exe/pbs-replan
 	url = git@github.com:ChristinaTan0704/PBS-LNS.git
+	branch = master
 [submodule "exe/pp-replan"]
 	path = exe/pp-replan
 	url = https://github.com/ChristinaTan0704/mapf-lns-exe.git
@@ -22,3 +24,4 @@
 [submodule "exe/bandit"]
 	path = exe/bandit
 	url = https://github.com/ChristinaTan0704/anytime-mapf.git
+	branch = main
