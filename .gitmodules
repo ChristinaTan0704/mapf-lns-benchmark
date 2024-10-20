@@ -21,3 +21,7 @@
 	path = exe/bandit
 	url = https://github.com/ChristinaTan0704/anytime-mapf.git
 	branch = main
+[submodule "exe/lns-rule-based"]
+	path = exe/lns-rule-based
+	url = https://github.com/ChristinaTan0704/mapf-lns-exe.git
+	branch = rule-based
