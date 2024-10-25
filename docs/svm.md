@@ -8,7 +8,7 @@ This is the implementation of [Anytime Multi-Agent Path Finding via Machine Lear
 
 ## Training 
 
-**Step 1** Download the training data by following [Data Preparation](../data.md).
+**Step 1** Download the training data by following [Data Preparation](data.md).
 
 
 **Step 2** Train the model by:
