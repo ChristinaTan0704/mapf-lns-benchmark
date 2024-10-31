@@ -10,8 +10,30 @@ This is the implementation of [Anytime Multi-Agent Path Finding via Machine Lear
 
 **Step 1** Download the training data by following [Data Preparation](data.md).
 
+**Step 2**: Download the SVM models from the [SVM Rank Official Website](https://www.cs.cornell.edu/people/tj/svm_light/svm_rank.html).
 
-**Step 2** Train the model by:
+According to the authors of SVM-LNS, they used the SVM Rank model from the [official SVM Rank website](https://www.cs.cornell.edu/people/tj/svm_light/svm_rank.html). Please follow the instructions on the official website to download the required SVM Rank models. The unzipped package from the website should contain the files `svm_rank_classify` and `svm_rank_learn`. Place these files under the `exe/svm_rank` folder. The folder structure should look like this:
+
+```
+exe
+└── svm_rank
+    ├── svm_rank_classify
+    └── svm_rank_learn
+```
+
+Quick example for downloading the SVM models on a Linux 64-bit system:
+
+```shell
+# Create a directory for the SVM Rank models 
+mkdir -p exe/svm_rank
+cd exe/svm_rank
+# Download and unzip the model package from the official website
+wget https://osmot.cs.cornell.edu/svm_rank/current/svm_rank_linux64.tar.gz
+tar -xvzf svm_rank_linux64.tar.gz
+```
+
+
+**Step 3** Train the model by:
 
 ```python
 python svm/svm_run.py --option train \
