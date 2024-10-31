@@ -21,7 +21,7 @@ exe
     └── svm_rank_learn
 ```
 
-Quick example for downloading the SVM models on a Linux 64-bit system:
+Quick example for setting up the SVM models on a Linux 64-bit system:
 
 ```shell
 # Create a directory for the SVM Rank models 
