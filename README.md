@@ -8,7 +8,7 @@
 
 
 <p align="center">
-    <img src="https://github.com/ChristinaTan0704/mapf-lns-benchmark/blob/main/docs/runtime_delay.jpg">
+    <img src="docs/runtime_delay.jpg">
 </p>
 
 
