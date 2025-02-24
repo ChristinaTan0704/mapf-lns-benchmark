@@ -3,11 +3,6 @@
   <a href="http://arxiv.org/abs/2407.09451">Benchmarking Large Neighborhood Search for Multi-Agent Path Finding</a>
 </h1>
 
-### [Jiaqi Tan*<sup>1</sup>](https://www.linkedin.com/in/jiaqi-christina-tan-800697158/) , [Yudong Luo*<sup>2</sup>](https://miyunluo.com/), [Jiaoyang Li<sup>3</sup>](https://jiaoyangli.me/) , [Hang Ma<sup>1</sup>](https://www.cs.sfu.ca/~hangma/)
-
-### <sup>1</sup> Simon Fraser University <sup>2</sup> University of Waterloo <sup>3</sup> Carnegie Mellon University
-
-
 </div>
 
 
@@ -26,6 +21,7 @@ This repository provides the official implementation of the paper [Benchmarking 
 - [Installation](#installation)
 - [Data preparation](#data-preparation)
 - [Methods](#methods)
+- [Technical Report](#Technical-Report)
 - [Acknowledgements](#acknowledgements)
 
 
@@ -96,6 +92,8 @@ For instreuctions on how to train and infer NNS-LNS, please follow [NNS-LNS impl
 - ### Bandit
 
 The executable for generating bandit results can be found in the submodule under `exe/bandit`. For instructions on how to infer bandit, please follow [bandit implementation](https://github.com/ChristinaTan0704/anytime-mapf/blob/main/README.md).
+
+## Technical Report
 
 
 ## Acknowledgements
