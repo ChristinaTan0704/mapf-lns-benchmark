@@ -13,9 +13,6 @@
 
 
 
-This repository provides the official implementation of the paper [Benchmarking Large Neighborhood Search for Multi-Agent Path Finding](http://arxiv.org/abs/2407.09451). 
-
-
 ## Table of Contents
 - [Introduction](#introduction)
 - [Installation](#installation)
