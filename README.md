@@ -8,7 +8,7 @@
 
 
 <p align="center">
-    <img src="docs/runtime_delay.jpg">
+    <img src="docs/delay-runtime.jpg">
 </p>
 
 
