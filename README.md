@@ -1,6 +1,6 @@
 <div align="center">
 <h1 align="center">
-  <a href="">A Comprehensive Reevaluation of Large Neighborhood Search in Multi-Agent Path finding: New Findings and Opportunities</a>
+  <a href="https://github.com/ChristinaTan0704/mapf-lns-benchmark/blob/anonymous/docs/SoCS___Reevaluation_of_Large_Neighborhood_Search_for_MAPF__Findings_and_Opportunities.pdf">A Comprehensive Reevaluation of Large Neighborhood Search in Multi-Agent Path finding: New Findings and Opportunities</a>
 </h1>
 
 </div>
@@ -18,7 +18,6 @@
 - [Installation](#installation)
 - [Data preparation](#data-preparation)
 - [Methods](#methods)
-- [Technical Report](#Technical-Report)
 - [Acknowledgements](#acknowledgements)
 
 
@@ -89,8 +88,6 @@ For instreuctions on how to train and infer NNS-LNS, please follow [NNS-LNS impl
 - ### Bandit
 
 The executable for generating bandit results can be found in the submodule under `exe/bandit`. For instructions on how to infer bandit, please follow [bandit implementation](https://github.com/ChristinaTan0704/anytime-mapf/blob/main/README.md).
-
-## Technical Report
 
 
 ## Acknowledgements
