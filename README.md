@@ -14,6 +14,7 @@
 
 
 
+
 </div>
 
 
@@ -21,6 +22,16 @@
 <p align="center">
     <img src="https://github.com/ChristinaTan0704/mapf-lns-benchmark/blob/anonymous/docs/delay-runtime.jpg">
 </p>
+
+
+<div align="left">
+
+<small><em>Check out the <a href="https://github.com/ChristinaTan0704/mapf-lns-unified/blob/mapf-lns-main/docs/SoCS%20camera%20ready%20Reevaluation_of_Large_Neighborhood_Search_for_MAPF__Findings_and_Opportunities.pdf">camera-ready version</a>.  
+The updated version of our SoCS paper will be available on <a href="https://arxiv.org/html/2407.09451v1">arXiv</a> by May 30, 2025.</em></small>
+
+
+</div>
+
 
 
 
