@@ -20,7 +20,7 @@
 
 
 <p align="center">
-    <img src="https://github.com/ChristinaTan0704/mapf-lns-benchmark/blob/anonymous/docs/delay-runtime.jpg">
+    <img src="https://github.com/ChristinaTan0704/mapf-lns-unified/blob/mapf-lns-main/docs/delay-runtime.jpg">
 </p>
 
 
