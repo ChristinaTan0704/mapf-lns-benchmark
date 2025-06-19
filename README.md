@@ -1,6 +1,6 @@
 <div align="center">
 <h1 align="center">
-  <a href="https://github.com/ChristinaTan0704/mapf-lns-unified/blob/mapf-lns-main/docs/SoCS%20camera%20ready%20Reevaluation_of_Large_Neighborhood_Search_for_MAPF__Findings_and_Opportunities.pdf">Reevaluation of Large Neighborhood Search for MAPF: <br>Findings and Opportunities</a>
+  <a href="https://arxiv.org/pdf/2407.09451">Reevaluation of Large Neighborhood Search for MAPF: <br>Findings and Opportunities</a>
 </h1>
 
 
