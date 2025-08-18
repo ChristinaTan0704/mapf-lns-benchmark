@@ -7,7 +7,7 @@
 <h4 align="center"> SoCS 2025 </h4>
 
 
-[Jiaqi Tan*<sup>1</sup>](https://www.linkedin.com/in/jiaqi-christina-tan-800697158/), [Yudong Luo*<sup>2</sup>](https://www2.cs.sfu.ca/~furukawa/), [Jiaoyang Li<sup>3</sup>](https://www2.cs.sfu.ca/~furukawa/), [Hang Ma<sup>1</sup>](https://www.cs.sfu.ca/~hangma/)
+[Jiaqi Tan*<sup>1</sup>](https://www.linkedin.com/in/jiaqi-christina-tan-800697158/), [Yudong Luo*<sup>2</sup>](https://miyunluo.com/), [Jiaoyang Li<sup>3</sup>](https://jiaoyangli.me/), [Hang Ma<sup>1</sup>](https://www.cs.sfu.ca/~hangma/)
 
 <sup>1</sup> Simon Fraser University <sup>2</sup> University of Waterloo <sup>3</sup> Carnegie Mellon University
 
